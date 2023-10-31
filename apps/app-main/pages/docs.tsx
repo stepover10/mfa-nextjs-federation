@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const RemoteNextPage = dynamic(() => import("docs/page"));
+const RemoteNextPage = dynamic(() => import("app_docs/index"));
 
 const Page_Docs = () => {
   return (

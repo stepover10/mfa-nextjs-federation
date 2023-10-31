@@ -8,28 +8,27 @@ const remoteNextUrl = `http://localhost:3000`;
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    main: `main_app@${remoteNextUrl}/_next/static/${location}/remoteEntry.js`,
+    app_main: `app_main@${remoteNextUrl}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["ui"],
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: "docs_app",
+        name: "app_docs",
         filename: "static/chunks/remoteEntry.js",
-        exposes: {},
+        exposes: {
+          "./index": "./pages/index.tsx",
+        },
         remotes: remotes(options.isServer),
-        shared: {},
         extraOptions: {
-          automaticAsyncBoundary: true,
           exposePages: true,
         },
       })
     );
-
+    
     return config;
   },
 };

@@ -21,7 +21,7 @@ importers:
         specifier: ^1.10.1
         version: 1.10.1
 
-  apps/docs:
+  apps/app-docs:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^7.0.8
@@ -46,7 +46,7 @@ importers:
         specifier: 5.1.3
         version: 5.1.3
 
-  apps/main:
+  apps/app-main:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^7.0.8
