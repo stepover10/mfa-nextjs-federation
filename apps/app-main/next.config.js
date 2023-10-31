@@ -1,6 +1,6 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
-const remoteNextUrl = `http://localhost:3001`;
+const remoteNextUrl = process.env.REMOTE_NEXT_URL || `http://localhost:3001`;
 
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";

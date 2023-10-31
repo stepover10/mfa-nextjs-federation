@@ -1,7 +1,6 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
-// const remoteNextUrl = process.env.REMOTE_NEXT_URL || `http://localhost:3000`;
-const remoteNextUrl = `http://localhost:3000`;
+const remoteNextUrl = process.env.REMOTE_NEXT_URL || `http://localhost:3000`;
 
 // this enables you to use import() and the webpack parser
 // loading remotes on demand, not ideal for SSR
