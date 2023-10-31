@@ -1,13 +1,13 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
-const remoteNextUrl = process.env.REMOTE_NEXT_URL || `http://localhost:3000`;
+const APP_MAIN_URL = process.env.BASE_URL || `http://localhost:3000`;
 
 // this enables you to use import() and the webpack parser
 // loading remotes on demand, not ideal for SSR
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    app_main: `app_main@${remoteNextUrl}/_next/static/${location}/remoteEntry.js`,
+    app_main: `app_main@${APP_MAIN_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
