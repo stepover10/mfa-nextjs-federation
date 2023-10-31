@@ -1,7 +1,7 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 // 호스트 환경 변수 추가
-const APP_DOCS_URL = process.env.BASE_URL || `http://localhost:3001`;
+const APP_DOCS_URL = process.env.BASE_URL
 
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
