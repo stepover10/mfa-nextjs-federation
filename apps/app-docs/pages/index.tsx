@@ -1,7 +1,7 @@
 const Page_Index = () => {
   return (
     <div>
-      bb
+      app-docs-page
     </div>
   )
 }
