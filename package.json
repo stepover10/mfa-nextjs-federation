@@ -1,6 +1,6 @@
 {
-  "repository": "https://github.com/vercel/examples.git",
-  "license": "MIT",
+  "name": "microfrontends",
+  "version": "0.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -22,7 +22,8 @@
   "devDependencies": {
     "@types/node": "^18.16.16",
     "prettier": "^2.8.8",
-    "turbo": "^1.10.1"
+    "turbo": "^1.10.1",
+    "eslint": "^8.11.0"
   },
   "packageManager": "pnpm@7.30.3"
 }
