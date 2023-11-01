@@ -26,6 +26,9 @@ module.exports = {
       ...config.resolve.modules, 
       '../src'
     ];
+    config.experimental = {
+      topLevelAwait: true
+    };
     config.plugins.push(
       new NextFederationPlugin({
         name: "app_main",

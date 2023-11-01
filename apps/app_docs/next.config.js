@@ -13,11 +13,18 @@ const remotes = (isServer) => {
 
 module.exports = {
   reactStrictMode: true,
-  optimizeFonts: true,
   experimental: {
-    transpilePackages: ['layout'],
+    transpilePackages: [
+      'layout'
+    ],
+  },
+  compiler: {
+    styledComponent: true,
   },
   webpack(config, options) {
+    config.experimental = {
+      topLevelAwait: true
+    };
     config.plugins.push(
       new NextFederationPlugin({
         name: "app_docs",
