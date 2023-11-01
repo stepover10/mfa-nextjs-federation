@@ -6,4 +6,4 @@ This is the Docs app for this monorepo. You can run it with the following comman
 pnpm dev
 ```
 
-The app should be up and running at http://localhost:3001.
+The app should be up and running at http://localhost:4001.

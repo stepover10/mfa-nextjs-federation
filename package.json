@@ -16,6 +16,9 @@
     "lint": "turbo run lint",
     "format": "prettier --write ."
   },
+  "dependencies": {
+    "styled-components": "6.1.0"
+  },
   "devDependencies": {
     "@types/node": "^18.16.16",
     "prettier": "^2.8.8",

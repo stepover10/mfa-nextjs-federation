@@ -1,6 +1,6 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
-const APP_MAIN_URL = process.env.BASE_URL || `http://localhost:3000`;
+const APP_MAIN_URL = process.env.BASE_URL || `http://localhost:4000`;
 
 // this enables you to use import() and the webpack parser
 // loading remotes on demand, not ideal for SSR
