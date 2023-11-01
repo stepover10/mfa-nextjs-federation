@@ -13,6 +13,7 @@ const remotes = (isServer) => {
 
 module.exports = {
   reactStrictMode: true,
+  optimizeFonts: true,
   experimental: {
     transpilePackages: ['layout'],
   },
