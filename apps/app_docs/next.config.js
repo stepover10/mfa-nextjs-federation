@@ -22,15 +22,16 @@ module.exports = {
     styledComponent: true,
   },
   webpack(config, options) {
-    config.experimental = {
-      topLevelAwait: true
-    };
+    config.resolve.modules = [ 
+      ...config.resolve.modules, 
+      '../src'
+    ];
     config.plugins.push(
       new NextFederationPlugin({
         name: "app_docs",
         filename: "static/chunks/remoteEntry.js",
         exposes: {
-          "./index": "./pages/index.tsx",
+          "./index": "./src/pages/index.tsx",
         },
         remotes: remotes(options.isServer),
         extraOptions: {
