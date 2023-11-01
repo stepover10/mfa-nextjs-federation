@@ -38,7 +38,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" type="text/css" href="/font/pretendard/static/pretendard.css" />
         </Head>
         <body>
           <Main />
