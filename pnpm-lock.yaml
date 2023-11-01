@@ -21,11 +21,14 @@ importers:
         specifier: ^1.10.1
         version: 1.10.1
 
-  apps/app-docs:
+  apps/app_docs:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^7.0.8
         version: 7.0.8(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+      layout:
+        specifier: workspace:*
+        version: link:../../packages/layout
       next:
         specifier: latest
         version: 14.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -46,11 +49,14 @@ importers:
         specifier: 5.1.3
         version: 5.1.3
 
-  apps/app-main:
+  apps/app_main:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^7.0.8
         version: 7.0.8(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+      layout:
+        specifier: workspace:*
+        version: link:../../packages/layout
       next:
         specifier: latest
         version: 14.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -70,6 +76,21 @@ importers:
       typescript:
         specifier: 5.1.3
         version: 5.1.3
+
+  packages/layout:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.0.17
+        version: 18.2.33
+      '@types/react-dom':
+        specifier: ^18.0.6
+        version: 18.2.14
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      typescript:
+        specifier: ^4.5.2
+        version: 4.9.5
 
 packages:
 
@@ -380,6 +401,12 @@ packages:
 
   /@types/prop-types@15.7.9:
     resolution: {integrity: sha512-n1yyPsugYNSmHgxDFjicaI2+gCNjsBck8UX9kuofAKlc0h1bL+20oSF72KeNaW2DUlesbEVCFgyV2dPGTiY42g==}
+    dev: true
+
+  /@types/react-dom@18.2.14:
+    resolution: {integrity: sha512-V835xgdSVmyQmI1KLV2BEIUgqEuinxp9O4G6g3FqO/SqLac049E53aysv0oEFD2kHfejeKU+ZqL2bcFWj9gLAQ==}
+    dependencies:
+      '@types/react': 18.2.33
     dev: true
 
   /@types/react@18.2.33:
@@ -1015,7 +1042,6 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
 
   /js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -1074,7 +1100,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -1296,7 +1321,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -1555,6 +1579,12 @@ packages:
   /type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /typescript@5.1.3:

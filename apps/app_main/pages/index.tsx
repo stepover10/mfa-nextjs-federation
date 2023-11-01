@@ -4,7 +4,7 @@ const Page_Index = () => {
   return (
     <div>
       <Link href="/docs">
-        app2
+        app_docs 파일 불러오기
       </Link>
     </div>
   )

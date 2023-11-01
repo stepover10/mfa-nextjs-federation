@@ -15,7 +15,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "webpack": "5.80.0"
+    "webpack": "5.80.0",
+    "layout": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "latest",
