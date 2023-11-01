@@ -36,6 +36,7 @@ module.exports = {
         remotes: remotes(options.isServer),
         extraOptions: {
           exposePages: true,
+          automaticAsyncBoundary: true,
         },
       })
     );
