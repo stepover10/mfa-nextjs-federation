@@ -32,6 +32,7 @@ module.exports = {
         name: "app_main",
         filename: "static/chunks/remoteEntry.js",
         remotes: remotes(options.isServer),
+        remoteType: "var",
         extraOptions: {
           exposePages: true,
         },
