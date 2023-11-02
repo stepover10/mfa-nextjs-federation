@@ -36,10 +36,6 @@ module.exports = {
         remotes: remotes(options.isServer),
         extraOptions: {
           exposePages: true,
-        },
-        shared: {
-          'react': { eager: true },
-          'react-dom': { eager: true }
         }
       })
     );

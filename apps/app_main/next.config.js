@@ -35,8 +35,15 @@ module.exports = {
           exposePages: true,
         },
         shared: {
-          'react': { eager: true },
-          'react-dom': { eager: true }
+          // ...deps,
+          react: {
+            eager: true,
+            singleton: true,
+          },
+          'react-dom': {
+            eager: true,
+            singleton: true,
+          },
         }
       })
     );
