@@ -31,6 +31,7 @@ module.exports = {
       new NextFederationPlugin({
         name: "app_main",
         filename: "static/chunks/remoteEntry.js",
+        remoteType: "var",
         remotes: remotes(options.isServer),
         extraOptions: {
           exposePages: true,

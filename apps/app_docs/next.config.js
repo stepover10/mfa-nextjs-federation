@@ -34,6 +34,7 @@ module.exports = {
         exposes: {
           "./index": "./src/pages/index.tsx",
         },
+        remoteType: "var",
         // remotes: remotes(options.isServer),
         extraOptions: {
           exposePages: true,
