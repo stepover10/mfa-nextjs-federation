@@ -1,8 +1,10 @@
 import dynamic from "next/dynamic";
 
-const RemoteNextPage = dynamic(() => import("app_docs/index"), {
-  ssr: false
-});
+// const RemoteNextPage = dynamic(() => import("app_docs/index"), {
+//   ssr: false
+// });
+
+import RemoteNextPage from "app_docs/index";
 
 const Page_Docs = () => {
   return (

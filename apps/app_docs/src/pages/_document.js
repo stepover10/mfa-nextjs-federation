@@ -38,8 +38,7 @@ class MyDocument extends Document {
             href="/font/pretendard/pretendard.css" 
           />
         </Head>
-
-        <body className="bg-background-grey">
+        <body>
         <Main />
         <NextScript />
         </body>
