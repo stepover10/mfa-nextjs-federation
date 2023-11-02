@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 100;
+
+  src: local('Pretendard Thin'), local('Pretendard-Thin'),
+    url('./woff2/Pretendard-Thin.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Thin.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Thin.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 200;
+
+  src: local('Pretendard ExtraLight'), local('Pretendard-ExtraLight'),
+    url('./woff2/Pretendard-ExtraLight.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-ExtraLight.woff') format('woff'),
+    /* Modern Browsers */
+      url('./ttf/Pretendard-ExtraLight.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Pretendard Light'), local('Pretendard-Light'),
+    url('./woff2/Pretendard-Light.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Light.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Light.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pretendard Regular'), local('Pretendard-Regular'),
+    url('./woff2/Pretendard-Regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Regular.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Regular.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Pretendard Medium'), local('Pretendard-Medium'),
+    url('./woff2/Pretendard-Medium.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Medium.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Medium.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Pretendard SemiBold'), local('Pretendard-SemiBold'),
+    url('./woff2/Pretendard-SemiBold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-SemiBold.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-SemiBold.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Pretendard Bold'), local('Pretendard-Bold'),
+    url('./woff2/Pretendard-Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Bold.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Bold.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Pretendard ExtraBold'), local('Pretendard-ExtraBold'),
+    url('./woff2/Pretendard-ExtraBold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-ExtraBold.woff') format('woff'),
+    /* Modern Browsers */
+      url('./ttf/Pretendard-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Pretendard Black'), local('Pretendard-Black'),
+    url('./woff2/Pretendard-Black.woff2') format('woff2'),
+    /* Super Modern Browsers */
+      url('./woff/Pretendard-Black.woff') format('woff'),
+    /* Modern Browsers */ url('./ttf/Pretendard-Black.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}

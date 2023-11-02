@@ -1,4 +1,5 @@
-import Header from "layout/src/Header"
+import '../app.styled/reset.css';
+import Header from "layout/src/Header";
 
 export default function App({ Component, pageProps }) {
   return (
