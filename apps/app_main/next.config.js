@@ -33,8 +33,11 @@ module.exports = {
         remotes: remotes(options.isServer),
         extraOptions: {
           exposePages: true,
-          automaticAsyncBoundary: true,
         },
+        shared: {
+          'react': { eager: true },
+          'react-dom': { eager: true }
+        }
       })
     );
 
