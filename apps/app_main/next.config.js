@@ -26,6 +26,7 @@ module.exports = {
       ...config.resolve.modules, 
       '../src'
     ];
+    
     config.plugins.push(
       new NextFederationPlugin({
         name: "app_main",
