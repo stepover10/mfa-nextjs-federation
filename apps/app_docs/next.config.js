@@ -1,4 +1,5 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
+// import { injectScript } from '@module-federation/nextjs-mf/lib/utils';
 
 const APP_MAIN_URL = process.env.APP_MAIN_PATH || `http://localhost:4000`;
 

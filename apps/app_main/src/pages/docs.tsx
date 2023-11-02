@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 //   ssr: false
 // });
 
+
 import RemoteNextPage from "app_docs/index";
 
 const Page_Docs = () => {
