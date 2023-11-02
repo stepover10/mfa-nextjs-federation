@@ -28,8 +28,8 @@ importers:
   apps/app_docs:
     dependencies:
       '@module-federation/nextjs-mf':
-        specifier: ^7.0.8
-        version: 7.0.8(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+        specifier: ^8.1.0-canary.1
+        version: 8.1.0-canary.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
       layout:
         specifier: workspace:*
         version: link:../../packages/layout
@@ -56,8 +56,8 @@ importers:
   apps/app_main:
     dependencies:
       '@module-federation/nextjs-mf':
-        specifier: ^7.0.8
-        version: 7.0.8(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+        specifier: ^8.1.0-canary.1
+        version: 8.1.0-canary.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
       layout:
         specifier: workspace:*
         version: link:../../packages/layout
@@ -211,8 +211,18 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@module-federation/nextjs-mf@7.0.8(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
-    resolution: {integrity: sha512-sjpcujqBKxP3pFD+tivvxizZnN2Pszwdm80u4sK5xfPAW8tzjX9PGpZdFmtj8TNAKDQ8i269mrd25ojOzEYu0Q==}
+  /@module-federation/enhanced@0.1.0(webpack@5.80.0):
+    resolution: {integrity: sha512-CymUY20htVd55Ff0G8tNeh1q3at/6xRa26Db8KcO1537aV41CFC5qRcTWd58EG9pgJhu9psyJPVaAjFXliB66g==}
+    peerDependencies:
+      webpack: ^5.0.0
+    dependencies:
+      tapable: 2.2.1
+      webpack: 5.80.0
+      webpack-sources: 3.2.3
+    dev: false
+
+  /@module-federation/nextjs-mf@8.1.0-canary.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
+    resolution: {integrity: sha512-OJsuqjp6Jea1611S6nAZSdcJcLpAgWP1foI8Ea09tVcLW1fmI6soM4MyuueCfr458Pl5qHJYP6JJ2eyMPicLqg==}
     peerDependencies:
       next: ^12 || ^13
       react: ^17 || ^18
@@ -223,8 +233,9 @@ packages:
       styled-jsx:
         optional: true
     dependencies:
-      '@module-federation/node': 1.0.7(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
-      '@module-federation/utilities': 2.0.6(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+      '@module-federation/enhanced': 0.1.0(webpack@5.80.0)
+      '@module-federation/node': 2.0.2-beta.6(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+      '@module-federation/utilities': 3.0.3-0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
       encoding: 0.1.13
       eventemitter3: 5.0.1
       fast-glob: 3.3.1
@@ -232,12 +243,13 @@ packages:
       node-fetch: 2.6.9(encoding@0.1.13)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      tapable: 2.2.1
       webpack: 5.80.0
       webpack-sources: 3.2.3
     dev: false
 
-  /@module-federation/node@1.0.7(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
-    resolution: {integrity: sha512-ZOdY8/qjAV8B8pL/+xf4KqEeQ6aJQoVjgn8IzS5Hk4qqMiow0Sf9EEX69LTI+GIVztVLjS/Q6N2QfS6ghsY1sw==}
+  /@module-federation/node@2.0.2-beta.6(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
+    resolution: {integrity: sha512-gv3eQDTuJ1IwMkzU1WRiTCbqfmd9kHrDdrPCve5x3C7Ns3WKO1GwXoU1UFLfl02TXlknJ8JSyCZ9iOB9J1LtUg==}
     peerDependencies:
       next: ^12||^13
       react: ^16||^17||^18
@@ -251,18 +263,20 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@module-federation/utilities': 2.0.6(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
+      '@module-federation/enhanced': 0.1.0(webpack@5.80.0)
+      '@module-federation/utilities': 3.0.3-0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0)
       encoding: 0.1.13
       next: 14.0.1(react-dom@18.2.0)(react@18.2.0)
       node-fetch: 2.6.9(encoding@0.1.13)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      tapable: 2.2.1
       webpack: 5.80.0
       webpack-sources: 3.2.3
     dev: false
 
-  /@module-federation/utilities@2.0.6(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
-    resolution: {integrity: sha512-2/jfEkdi5U0SZDZMaZrTakhtacXIZib84jOHXrGEw3wQ1x8DfPyOtO7WW/G+DmsEGq4z+OVkMrDQTw+KjHTFNQ==}
+  /@module-federation/utilities@3.0.3-0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)(webpack@5.80.0):
+    resolution: {integrity: sha512-IMNqtXuqKz10ZN7wPivjFGcSyqjDoRVI5mSmv4jU8o7bBn0sDuFVbY9WswDrl+QOjMAhiAh7Ne4pUc/FKG9SUg==}
     peerDependencies:
       next: ^12 || ^13
       react: ^16 || ^17 || ^18

@@ -1,1 +1,2 @@
-// declare module "app_docs/index";
+declare module "app_docs/test";
+declare module "app_docs/index";

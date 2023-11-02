@@ -4,14 +4,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 4000",
-    "build": "next build",
+    "dev": "next dev --port 3000",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf .next && rm -rf .turbo"
   },
   "dependencies": {
-    "@module-federation/nextjs-mf": "^7.0.8",
+    "@module-federation/nextjs-mf": "^8.1.0-canary.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

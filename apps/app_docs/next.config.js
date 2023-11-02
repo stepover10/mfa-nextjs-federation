@@ -1,16 +1,16 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 // import { injectScript } from '@module-federation/nextjs-mf/lib/utils';
 
-const APP_MAIN_URL = process.env.APP_MAIN_PATH || `http://localhost:4000`;
+// const APP_MAIN_URL = `http://localhost:3000`;
 
 // this enables you to use import() and the webpack parser
 // loading remotes on demand, not ideal for SSR
-const remotes = (isServer) => {
-  const location = isServer ? "ssr" : "chunks";
-  return {
-    app_main: `app_main@${APP_MAIN_URL}/_next/static/${location}/remoteEntry.js`,
-  };
-};
+// const remotes = (isServer) => {
+//   const location = isServer ? "ssr" : "chunks";
+//   return {
+//     app_main: `app_main@${APP_MAIN_URL}/_next/static/${location}/remoteEntry.js`,
+//   };
+// };
 
 module.exports = {
   reactStrictMode: true,
@@ -20,7 +20,7 @@ module.exports = {
     ],
   },
   compiler: {
-    styledComponent: true,
+    styledComponents: true,
   },
   webpack(config, options) {
     config.resolve.modules = [ 
