@@ -4,26 +4,16 @@ import { revalidate, FlushedChunks, flushChunks } from "@module-federation/nextj
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    if(process.env.NODE_ENV === "development" && !ctx.req.url.includes("_next")) {
-      await revalidate().then((shouldReload) =>{
-        if (shouldReload) {
-          ctx.res.writeHead(302, { Location: ctx.req.url });
-          ctx.res.end();
-        }
-      });
-    } else {
-      ctx?.res?.on("finish", () => {
-        revalidate()
-      });
-    }
     const initialProps = await Document.getInitialProps(ctx);
-    const chunks = await flushChunks()
 
-    return {
-      ...initialProps,
-      chunks
-    };
+    // can be any lifecycle or implementation you want
+    ctx?.res?.on('finish', () => {
+      revalidate().then((shouldUpdate) => {
+        console.log('finished sending response', shouldUpdate);
+      });
+    });
 
+    return initialProps;
   }
 
   render() {
@@ -38,7 +28,8 @@ class MyDocument extends Document {
             href="/font/pretendard/pretendard.css" 
           />
         </Head>
-        <body>
+
+        <body className="bg-background-grey">
         <Main />
         <NextScript />
         </body>
