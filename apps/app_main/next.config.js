@@ -7,7 +7,7 @@ const APP_DOCS_URL = process.env.APP_DOCS_PATH || `http://localhost:4001`;
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    app_docs: `app_docs@${APP_DOCS_URL}/_next/static/${location}/remoteEntry.js`,
+    app_docs: `internal ./remote-delegate.js?remote=app_docs@${APP_DOCS_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
@@ -32,7 +32,6 @@ module.exports = {
         name: "app_main",
         filename: "static/chunks/remoteEntry.js",
         remotes: remotes(options.isServer),
-        remoteType: "var",
         extraOptions: {
           exposePages: true,
         },
