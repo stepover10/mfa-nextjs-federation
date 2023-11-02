@@ -26,6 +26,10 @@ module.exports = {
       ...config.resolve.modules, 
       '../src'
     ];
+
+    if (!options.isServer) {
+      config.optimization.splitChunks = false;
+    }
     
     config.plugins.push(
       new NextFederationPlugin({
