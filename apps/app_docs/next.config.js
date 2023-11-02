@@ -26,6 +26,9 @@ module.exports = {
       ...config.resolve.modules, 
       '../src'
     ];
+    
+    config.optimization.splitChunks = false;
+
     config.plugins.push(
       new NextFederationPlugin({
         name: "app_docs",
