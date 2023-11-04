@@ -1,29 +1,22 @@
 {
   "name": "microfrontends",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "./apps/*",
+    "./packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "build:main": "turbo run build --filter=app_main...",
     "build:docs": "turbo run build --filter=app_docs...",
-    "dev": "turbo run dev",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true turbo run dev",
     "start": "turbo run start",
-    "clean": "turbo run clean && rm -rf node_modules",
+    "clean": "rm -rf node_modules",
     "lint": "turbo run lint",
     "format": "prettier --write ."
   },
-  "dependencies": {
-    "styled-components": "6.1.0"
-  },
   "devDependencies": {
-    "@types/node": "^18.16.16",
-    "prettier": "^2.8.8",
-    "turbo": "^1.10.1",
-    "eslint": "^8.11.0"
-  },
-  "packageManager": "pnpm@7.30.3"
+    "turbo": "latest"
+  }
 }
