@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import RemoteNextPage from "app_docs/index";
 
-const Page_Docs: any = (props) => {
-  console.log(props)
+const Page_Docs: any = () => {
   return (
     <div>
       DOCS 앱
@@ -17,7 +16,8 @@ Page_Docs.getInitialProps = RemoteNextPage.getInitialProps;
 
 /*
 import RemoteDocsIndex from 'app_docs/index';
-// console.log('SARE SCOP{E', __webpack_share_scopes__);
 const Page_Docs = RemoteDocsIndex;
 Page_Docs.getInitialProps = RemoteDocsIndex.getInitialProps;
-export default Page_Docs;*/
+export default Page_Docs;
+*/
+

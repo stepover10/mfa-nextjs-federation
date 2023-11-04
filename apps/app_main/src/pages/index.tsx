@@ -4,9 +4,8 @@ import styled from "styled-components";
 const Page_Index = () => {
   return (
     <SteyldWrapper>
-      <Link href="/docs">
-        app_docs 페이지로 이동하기
-      </Link>
+      <Link href="/docs">app_docs 페이지로 이동하기</Link>
+      <Link href="/test">API 통신 테스트</Link>
     </SteyldWrapper>
   )
 }

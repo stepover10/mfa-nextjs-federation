@@ -11,7 +11,7 @@
     "build:main": "turbo run build --filter=app_main...",
     "build:docs": "turbo run build --filter=app_docs...",
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true turbo run dev",
-    "start": "turbo run start",
+    "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true turbo run start",
     "clean": "rm -rf node_modules",
     "lint": "turbo run lint",
     "format": "prettier --write ."
