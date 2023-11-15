@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import RemoteNextPage from "app_docs/index";
+
 const Page_Docs: any = () => {
   return (
     <div>

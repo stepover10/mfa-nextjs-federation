@@ -1,11 +1,20 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { Header, Footer } from '@pkg/layout';
+import MainTest from "../app.feature/main/MainTest";
 
 const Page_Index = () => {
   return (
     <SteyldWrapper>
+      <Header />
+      
+      <MainTest />
       <Link href="/docs">app_docs 페이지로 이동하기</Link>
       <Link href="/test">API 통신 테스트</Link>
+      <br />
+      <br />
+
+      <Footer />
     </SteyldWrapper>
   )
 }

@@ -20,15 +20,15 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["packages/*", "apps/*"]
+      "@pkg/*": ["./packages/*"]
     }
   },
   "exclude": [
     "./node_modules/**/*"
   ],
   "include": [
-    "apps/*.tsx",
-    "packages/*.tsx",
+    "./apps/*",
+    "./packages/*",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

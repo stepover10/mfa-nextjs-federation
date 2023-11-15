@@ -1,11 +1,9 @@
 import '../app.styled/reset.css';
-import Header from "@pkg/layout/src/Header";
 
 export default function App({ Component, pageProps }) {
   console.log(pageProps)
   return (
     <>
-      <Header />
       <Component {...pageProps} />
     </>
   )

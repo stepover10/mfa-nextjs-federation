@@ -15,6 +15,7 @@ const remotes = (isServer) => {
   };
 };
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   
