@@ -4,7 +4,13 @@ import {Button} from "@pkg/button";
 const Page_Index = () => {
   return (
     <div>
-      마이크로 프론트 엔드 유저 페이지 테스트 !
+      마이크로 프론트 엔드 유저 페이지 테스트 버튼
+      <br/>
+      <br/>
+      <Button/>
+      <br/>
+      <br/>
+      <br/>
       <Button/>
     </div>
   );

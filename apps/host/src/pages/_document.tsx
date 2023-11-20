@@ -1,34 +1,27 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import React from 'react';
-import {
-  revalidate,
-  FlushedChunks,
-  flushChunks,
-} from '@module-federation/nextjs-mf/utils';
+import {revalidate, FlushedChunks, flushChunks} from '@module-federation/nextjs-mf/utils';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    if (
-      process.env.NODE_ENV === 'development' &&
-      !ctx.req.url.includes('_next')
-    ) {
+    if (process.env.NODE_ENV === "development") {
       await revalidate().then((shouldReload) => {
         if (shouldReload) {
-          ctx.res.writeHead(302, { Location: ctx.req.url });
+          ctx.res.writeHead(302, {Location: ctx.req.url});
           ctx.res.end();
         }
       });
     } else {
-      ctx?.res?.on('finish', () => {
-        revalidate();
+      ctx?.res?.on("finish", () => {
+        revalidate()
       });
     }
+
+    const chunks = await flushChunks()
     const initialProps = await Document.getInitialProps(ctx);
-    const chunks = await flushChunks();
 
     return {
       ...initialProps,
-      chunks,
+      chunks
     };
   }
 
@@ -36,18 +29,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="robots" content="noindex" />
-          <FlushedChunks chunks={this.props.chunks} />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="/font/pretendard/pretendard.css"
-          />
+          <FlushedChunks chunks={this.props.chunks}/>
         </Head>
-
-        <body className="bg-background-grey">
-          <Main />
-          <NextScript />
+        <body>
+        <Main/>
+        <NextScript/>
         </body>
       </Html>
     );

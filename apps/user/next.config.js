@@ -8,23 +8,19 @@ const nextConfig = {
     '@pkg/layout',
     '@pkg/button',
   ],
-
-  compiler: {
-    styledComponents: true,
-  },
   
   webpack(config, options) {
-    config.resolve.modules = [ 
-      ...config.resolve.modules, 
-      '../src'
-    ];
-    
     config.plugins.push(
       new NextFederationPlugin({
         name: "user",
         filename: "static/chunks/remoteEntry.js",
         exposes: {
           "./index": "./src/pages/index.tsx",
+        },
+        shared: {
+          "react-dom": {
+            eager: true,
+          },
         },
         extraOptions:{
           exposePages: true
